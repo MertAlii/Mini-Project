@@ -1,17 +1,20 @@
 import qrcode
 import os
 
+qr_klasoru = "Qr Kodlarım"
+os.makedirs(qr_klasoru, exist_ok=True)
+
 input_URL = input("URL'yi girin: ")
 
 if not input_URL:
     print("Hata: URL girmediniz.")
 else:
-    sayac = 0  
+    sayac = 0
 
     while True:
-        dosya_adi = (f"url_qrcode_{sayac}.png")
+        dosya_adi = (f"{qr_klasoru}/url_qrcode_{sayac}.png")
 
-        if not os.path.exists(dosya_adi):  
+        if not os.path.exists(dosya_adi):
             qr = qrcode.QRCode(
                 version=1,
                 error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -22,10 +25,10 @@ else:
             qr.add_data(input_URL)
             qr.make(fit=True)
 
-            resim = qr.make_image(fill_color="red", back_color="white")
+            resim = qr.make_image(fill_color="black", back_color="white")
             resim.save(dosya_adi)
 
-            print(f"QR kod dosyası kaydedildi: {dosya_adi}")
+            print(f"QR kod dosyasına kaydedildi: {dosya_adi}")
             break
         else:
-            sayac += 1  
+            sayac += 1
