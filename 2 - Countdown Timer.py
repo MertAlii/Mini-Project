@@ -1,6 +1,6 @@
 import time
 
-def Sure(t):
+def Süre(t):
     while t:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins,secs)
@@ -12,4 +12,4 @@ def Sure(t):
 
 t = input("Saniye Giriniz: ")
 
-Sure(int(t))
+Süre(int(t))

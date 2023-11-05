@@ -1,13 +1,13 @@
-def addition(x, y):
+def Toplama(x, y):
     return x + y
 
-def subtraction(x, y):
+def Çıkarma(x, y):
     return x - y
 
-def multiplication(x, y):
+def Çarpma(x, y):
     return x * y
 
-def division(x, y):
+def Bölme(x, y):
     if y == 0:
         return "Sıfıra bölme hatası"
     else:
@@ -31,16 +31,16 @@ while True:
     sayi2 = float(input("İkinci sayıyı giriniz: "))
     
     if secim == "1":
-        print("İşlemin sonucu", addition(sayi1, sayi2))
+        print("İşlemin sonucu", Toplama(sayi1, sayi2))
     
     elif secim == "2":
-        print("İşlemin sonucu", subtraction(sayi1, sayi2))
+        print("İşlemin sonucu", Çıkarma(sayi1, sayi2))
     
     elif secim == "3":
-        print("İşlemin sonucu", multiplication(sayi1, sayi2))
+        print("İşlemin sonucu", Çarpma(sayi1, sayi2))
     
     elif secim == "4":
-        print("İşlemin sonucu", division(sayi1, sayi2))
+        print("İşlemin sonucu", Bölme(sayi1, sayi2))
     
     else:
         print("Geçersiz Sayı")
